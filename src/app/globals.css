@@ -1,27 +1,70 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.header {
+  border: 3px solid rgb(0, 183, 255);
+  border-radius: 1cm;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a cool text shadow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2ab0d5bb;
+  height: 70px; /* Set a fixed height or adjust as needed */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.taskform {
+  margin: 30px;
+  padding: 10px;
+  border: 1.5px solid yellow;
+  border-radius: .5cap;
+  display: flex; /* Change to flex to align items in a row */
+  align-items: center; /* Center items vertically */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* Adjust input widths and add flex-grow for flexibility */
+.title-input {
+  height: 100px;
+  width: 20%;
+  margin: 10px;
+  padding: 11px;
+  border: 1px solid rgb(205, 225, 253);
+  border-radius: 1cap;
+  text-align: center;
+}
+
+.description-input {
+  height: 100px;
+  width: 70%;
+  margin: 10px;
+  padding: 11px;
+  border: 1px solid rgb(205, 225, 253);
+  border-radius: 1cap;
+  text-align: center;
+}
+
+.btn-task-add {
+  background-color: rgb(225, 255, 233);
+  height: 30px;
+  width: 70px;
+  margin: 10px;
+  border: 1px solid rgb(205, 225, 253);
+  border-radius: .5cap;
+}
+.all-task-list{
+  border: 1px solid rgb(205, 225, 253);
+  border-radius: .5cap;
+}
+
+.all-task-list {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+}
+
+.tasks-list {
+  display: flex; /* Align items in a row */
+  justify-content: space-between; /* Add space between items */
+  border-bottom: 1px solid rgb(205, 225, 253); /* Add border between tasks */
+  margin: 10px 0; /* Add some vertical margin */
+}
+
+.taskslist-details {
+  flex-grow: 1; /* Allow details to grow and take available space */
 }
